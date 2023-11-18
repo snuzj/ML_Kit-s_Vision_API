@@ -33,8 +33,8 @@ open class FaceBoxOverlay(context: Context?, attrs: AttributeSet?): View(context
             overlay.mOffsetY = offsetY
 
             val mappedBox = RectF().apply {
-                left = faceBoundingBox.right * scale + offsetX
-                right = faceBoundingBox.left * scale + offsetX
+                left = faceBoundingBox.left * scale + offsetX
+                right = faceBoundingBox.right * scale + offsetX
                 top = faceBoundingBox.top * scale + offsetY
                 bottom = faceBoundingBox.bottom * scale + offsetY
             }
@@ -42,8 +42,8 @@ open class FaceBoxOverlay(context: Context?, attrs: AttributeSet?): View(context
             val centerX = overlay.width.toFloat() / 2
 
             return mappedBox.apply {
-                left = centerX + (centerX - left)
-                right = centerX - (right - centerX)
+                left = centerX - (centerX - left)
+                right = centerX + (right - centerX)
             }
         }
 
