@@ -40,7 +40,6 @@ android {
 }
 
 dependencies {
-
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
@@ -57,4 +56,13 @@ dependencies {
     //barcode ML Kit
     implementation("com.google.mlkit:barcode-scanning:17.2.0")
 
+    //Face Detection
+    implementation("com.google.android.gms:play-services-mlkit-face-detection:17.1.0")
+    implementation("com.google.mlkit:face-detection:16.1.5")
+
+    //Guava
+    implementation("com.google.guava:guava:32.1.3-android")
+
+    val activity_version = "1.8.1"
+    implementation("androidx.activity:activity-ktx:$activity_version")
 }

@@ -6,52 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_centerHorizontal="true"
-        android:layout_width="380dp"
-        android:layout_height="500dp"
-        android:layout_margin="10dp"
-        android:id="@+id/mainLl"
-        android:orientation="vertical"
-        android:padding="10dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="QR Type:"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/qrTypeTv"
-            android:text="URL"
-            android:textSize="16sp"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="QR Content:"
-            android:layout_marginTop="10dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/qrContentTv"
-            android:text="content"
-            android:textSize="16sp"
-            android:textStyle="bold"/>
-
-
-    </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/QRscanner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cornerRadius="8dp"
-        android:layout_below="@id/mainLl"
         android:layout_centerInParent="true"
         android:text="START SCANNER"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/faceDetectionBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/QRscanner"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:text="FACE DETECTION"
+        app:cornerRadius="8dp"/>
 
 </RelativeLayout>

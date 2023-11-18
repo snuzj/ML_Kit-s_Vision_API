@@ -4,11 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ScannerActivity">
+    tools:context=".scanner.ScannerActivity">
 
     <androidx.camera.view.PreviewView
+        android:id="@+id/preview_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/preview_view"/>
+        android:layout_height="match_parent" >
+
+
+    </androidx.camera.view.PreviewView>
+
+    <LinearLayout
+        android:id="@+id/resultLl"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="QR Type:" />
+
+        <TextView
+            android:id="@+id/qrTypeTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="URL"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="QR Content:" />
+
+        <TextView
+            android:id="@+id/qrContentTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="content"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
 
 </RelativeLayout>
